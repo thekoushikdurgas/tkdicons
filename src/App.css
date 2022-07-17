@@ -1,0 +1,371 @@
+.tkdicon {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.tkdicon .iconsblock {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: flex-start;
+  padding: 10px 10px 0;
+}
+.tkdicon .iconsblocksearchbox {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: none;
+  color: var(--text-color);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgb(0 0 0 / 15%);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.tkdicon .tkdform1 .field {
+  width: 100%;
+  height: 45px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+}
+.tkdicon .tkdform1 .field .inputlo {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 36px 0 15px;
+  font-size: 17px;
+  transition: all 0.3s ease 0s;
+  position: absolute;
+  font-family: Acme, sans-serif;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: none;
+  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgb(0 0 0 / 15%);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.tkdicon .tkdform1 .field input {
+  transition: box-shadow 0.1s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+  box-shadow: rgb(44 1 1) 0 0 20px 0, rgb(44 1 1) 0 0 11px 0 inset;
+}
+.tkdicon .tkdform1 .field .labello {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  color: var(--tkd2);
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease 0s;
+  font-family: Acme, sans-serif;
+}
+.tkdicon .tkdform1 .field .inputlo:focus ~ .labello,
+.tkdicon .tkdform1 .field .inputlo:valid ~ .labello {
+  top: -14px;
+  font-size: 16px;
+  transform: translateY(-50%);
+}
+.tkdicon .tkdform1 .field .inputlo::placeholder {
+  color: rgb(153, 153, 153);
+  transition: all 0.3s ease 0s;
+}
+.tkdicon .tkdform1 .field .inputlo:focus::placeholder {
+  color: rgb(179, 179, 179);
+}
+.tkdicon .tkdform1 .field .inputlo::-webkit-input-placeholder {
+  opacity: 0;
+}
+.tkdicon .tkdform1 .field .inputlo:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+.tkdicon .tkdform1 .field i {
+  position: absolute;
+  right: 22px;
+  font-size: 25px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0) rotate(0deg);
+  cursor: pointer;
+  color: var(--tkd2);
+}
+.tkdicon .tkdform1 .field i.show {
+  transform: scale(1) rotate(360deg);
+}
+.tkdicon .iconsblocklist ul {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.tkdicon .iconsblocklist ul li {
+  height: 90px;
+  padding: 6px;
+  cursor: pointer;
+  transform: scale(1);
+}
+.tkdicon .iconsblocklist ul li .iconli .copycode {
+  position: absolute;
+  top: 14px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  transform: translateY(0%) scale(0);
+  width: 145px;
+  background: var(--tkd1);
+  border: 3px solid rgb(44, 1, 1);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: none;
+  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgb(0 0 0 / 15%);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.tkdicon .iconsblocklist ul li:hover .iconli .copycode {
+  opacity: 1;
+  transform: translateY(-173%) scale(1);
+  padding: 10px;
+}
+.tkdicon .iconsblocklist ul li:hover .iconli .copycode::before {
+  content: "";
+  position: absolute;
+  top: 102%;
+  left: 40%;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 0.1);
+}
+.tkdicon .iconsblocklist ul li .iconli {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  color: var(--text-color);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgb(0 0 0 / 15%);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.tkdicon .iconsblocklist ul li .iconli i {
+  font-size: 48px;
+  display: flex;
+  height: 48px;
+}
+.tkdicon .iconsblocklist ul li .iconli span {
+  text-transform: capitalize;
+  font-size: 12px;
+  text-align: center;
+  font-family: Julius Sans One;
+  text-shadow: 0 4px 4px #282828;
+  -webkit-text-stroke: 1px #f8f8f8;
+}
+.tkdicon .copydiv i {
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 50%;
+  transform: scale(1);
+  display: -webkit-inline-box;
+}
+.tkdicon .copydiv i:hover,
+.tkdicon .iconsblocklist ul li:hover {
+  transform: scale(1.1);
+}
+.tkdicon .copydiv i:active,
+.tkdicon .iconsblocklist ul li:active {
+  transform: scale(0.9);
+}
+.tkdicon .iconheading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 20px;
+  position: relative;
+  margin: 5px 0;
+}
+.tkdicon .iconheading:before {
+  content: "";
+}
+.tkdicon .iconheading a {
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  border: 3px solid var(--tkd2);
+  border-radius: 20px;
+  background: var(--tkd1);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0s;
+  box-shadow: 0 0 20px 4px #2c0101, inset 0 0 11px 0 #2c0101;
+  padding: 2px 24px;
+  color: var(--tkd1);
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: none;
+  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgb(0 0 0 / 15%);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.tkdicon .iconheading a i {
+  margin-right: 17px;
+  display: flex;
+}
+.tkdicon .tkdform1 .btnbtn,
+.tkdicon .tkdform1 .btnbtns {
+  width: 20%;
+}
+.tkdicon .tkdform1 .field button {
+  width: 80%;
+  z-index: 1;
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  text-decoration: none;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  user-select: none;
+  outline: none;
+  border: none;
+  background: var(--background-color);
+  border-radius: 20px;
+  box-shadow: inset 5px 5px 15px #96969680, inset -5px -5px 15px #00000080,
+    3px 3px 5px #000000b3;
+  transition: box-shadow 0.15s;
+  line-height: 0;
+  color: var(--text-color);
+}
+.tkdicon .tkdform1 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: auto;
+}
+.tkdicon .copydiv {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.tkdicon .hydrated {
+  position: fixed;
+  right: 0;
+  transition: transform 0.4s ease-in-out;
+  margin: auto;
+  padding: 12px 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
+}
+.tkdicon .hydrated .hydratedcontainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: 83%;
+  margin: auto;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: none;
+  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgb(0 0 0 / 15%);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.tkdicon .hydrated .hydratedcontainer .hydrateddiv .copycodespan {
+  align-items: center;
+  padding: 3px 24px;
+  border-radius: 20px;
+  background: var(--tkd2);
+  box-shadow: 0 5px 5px rgb(0 0 0 / 40%);
+  color: #fe6100;
+  flex-direction: column;
+  position: relative;
+  transform-origin: left;
+}
+.tkdicon .hydrated .hydratedcontainer .hydrateddiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.tkdicon .hydratedicon {
+  font-size: 35px;
+}
+.tkdicon code .yellow {
+  color: var(--tkdyellow);
+}
+.tkdicon code .red {
+  color: var(--tkdred);
+}
+.tkdicon code .green {
+  color: var(--tkdgreen);
+}
+.tkdicon .hydrated.visiable {
+  transform: translateY(0%);
+}
+.tkdicon .hydratedicon i {
+  display: flex;
+  align-items: center;
+  font-size: 48px;
+  height: 48px;
+}
+.tkdicon .iconsblocklist ul li.active {
+  transform: scale(1.1);
+}
+.tkdicon .iconsblocklist {
+  overflow-y: scroll;
+  height: 88vh;
+  padding-bottom: 85px;
+}
+.tkdicon .iconsblocklist::-webkit-scrollbar {
+  width: 8px;
+}
+.tkdicon .iconsblocklist::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.hydrated .hydratedcontainer button.close-btn {
+  background: none;
+  border: 0;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 20px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+}
