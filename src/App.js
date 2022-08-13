@@ -2,6 +2,7 @@
 /* eslint-disable array-callback-return */
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
+import Cookies from 'js-cookie';
 import './App.css';
 import Loading from './component/Loading/Loading';
 
@@ -70,7 +71,10 @@ export default function MusicPlayer() {
           temp = [];
           for (var i = 0; i < searhiconiconlist.length; i++) {temp.push(10);}
           setlengthicon(temp);
-          seticon2list(iconlist);
+        //   seticon2list(iconlist);
+        console.log(Cookies.get('iconsearch')===undefined?"":Cookies.get('iconsearch'));
+          setsearch(Cookies.get('iconsearch')===undefined?"":Cookies.get('iconsearch'));
+          seticon2list(searchjson(Cookies.get('iconsearch')===undefined?"":Cookies.get('iconsearch')));
           setrender(false);
       }
       else{geticonlist();}
@@ -83,7 +87,7 @@ export default function MusicPlayer() {
           <div className="iconsblocksearchbox">
               <div className="tkdform1">
                   <div className="field">
-                      <input type="text" id="searchicon" name="searchicon" value={search} placeholder="eg. ...." autoComplete="off" className="inputlo" onChange={(event)=>{setsearch(event.target.value);seticon2list(searchjson(event.target.value));}}/>
+                      <input type="text" id="searchicon" name="searchicon" value={search} placeholder="eg. ...." autoComplete="off" className="inputlo" onChange={(event)=>{setsearch(event.target.value);seticon2list(searchjson(event.target.value));Cookies.set('iconsearch', event.target.value, { path: '', domain: '.thekoushikdurgas.in' });}}/>
                       <i className={`fab fa-searchengin ${show1?'show':''}`} id="fasearchengin"></i>
                       <i className={`fad fa-times ${show1?'':'show'}`} id="fatimes" onClick={()=>{setsearch('');seticon2list(searchjson(''));}}></i>
                   </div>
