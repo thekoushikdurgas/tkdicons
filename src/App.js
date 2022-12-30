@@ -7,7 +7,8 @@ import './App.css';
 import Loading from './component/Loading/Loading';
 
 export default function MusicPlayer() {
-  const host = "https://thekoushikdurgasserver.herokuapp.com";
+//   const host = "http://localhost:8000";
+  const host = "https://thekoushikdurgasserver.onrender.com";
   const searhiconiconlist = [
       {'link': 'http://koushikchandrasaha.thekoushikdurgas.in/css/pro.min.css', 'title': 'Font Awesome Icons', 'iocn': 'fab fa-font-awesome-flag', 'key': 'font_awesome_icons'}, 
       {'link': 'http://koushikchandrasaha.thekoushikdurgas.in/css/bootstrap-icons.css', 'title': 'Bootstrap Icons', 'iocn': 'bi bi-bootstrap-fill', 'key': 'bootstrap_icon'}, 
